@@ -10,15 +10,19 @@
 </head>
 <body>
     
-    <h1>Todo List</h1>
+    <div class="container">
+        <div class="app">
+            <h1>Todo List</h1>
 
-    <div class="input">
-        <input type="text" id="input">
-        <button onclick="addItem()">add</button>
+            <div class="input">
+                <input type="text" id="input" placeholder="Enter Your Text">
+                <button onclick="addItem()">Enter</button>
+            </div>
+
+            <ul id="list">
+            </ul>
+        </div>
     </div>
-
-    <ul id="list">
-    </ul>
     
     <script src="/js/app.js"></script>
 

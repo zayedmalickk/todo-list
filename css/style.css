@@ -1,3 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
 .check {
     text-decoration: line-through;
+}
+
+.container {
+    width: calc(100vw - 20px);
+    min-height: calc(100vh - 20px);
+    background-color: #77a6f7;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-image: url("/img.jpg");
+    background-size: cover;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: max-content;
+    margin: 50px 0px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+}
+
+.app h1 {
+    color: white;
+}
+
+.app .input {
+    width: 100%;
+    display: flex;
+    column-gap: 5px;
+}
+
+.app .input input {
+    width: 100%;
+    font-size: 17px;
+    padding: 10px 15px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    transition: .2s;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+}
+
+.app .input input::placeholder {
+    color: lightgray;
+    font-size: 15px;
+}
+
+.app .input button {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    outline: none;
+    transition: .2s;
+}
+
+.app .input button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    cursor: pointer;  
+}
+
+.app #list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    row-gap: 20px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.app #list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.app #list li span {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.015);
+    backdrop-filter: blur(20px);
+    transition: .2s;
+}
+
+.app #list li span:hover {
+    background-color: #d5d5d5;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(20px);
 }
