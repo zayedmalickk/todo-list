@@ -13,11 +13,10 @@ body {
 .container {
     width: calc(100vw - 20px);
     min-height: calc(100vh - 20px);
-    background-color: #77a6f7;
     display: flex;
     padding: 10px;
     justify-content: center;
-    background-image: url("/img.jpg");
+    background-image: url("/assets/bg.jpg");
     background-size: cover;
 }
 
@@ -25,8 +24,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: max-content;
-    margin: 50px 0px;
+    height: calc(100vh - 120px);
+    margin: 20px 0px;
     padding: 30px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
@@ -34,6 +33,7 @@ body {
 
 .app h1 {
     color: white;
+    margin: 15px 0;
 }
 
 .app .input {
@@ -79,8 +79,19 @@ body {
     flex-direction: column;
     list-style: none;
     row-gap: 20px;
-    overflow: hidden;
+    overflow: auto; /* Change 'hidden' to 'auto' */
     padding: 0;
+}
+
+.app #list::-webkit-scrollbar {
+    width: 5px; /* Adjust the width as needed */
+}
+
+/* Style the thumb of the scrollbar */
+.app #list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px; 
+    backdrop-filter: blur(10px);
 }
 
 .app #list li {
@@ -89,6 +100,11 @@ body {
     align-items: center;
     font-size: 17px;
     color: #ffffff;
+    margin: 0 3px;
+}
+
+.app #list li:hover {
+    cursor: pointer;
 }
 
 .app #list li span {
@@ -105,4 +121,15 @@ body {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(20px);
+}
+
+
+
+
+    
+@media (max-width: 900px) {
+    .app {
+        /* margin 20px; */
+        width: 80%;
+    }
 }
